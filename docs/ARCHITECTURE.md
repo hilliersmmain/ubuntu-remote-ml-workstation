@@ -20,7 +20,7 @@ I'm running a **hybrid setup** where different parts of my workflow live in diff
 
 - I can access it from anywhere (coffee shop, library, campus)
 - It's always on, even when my laptop is closed
-- Costs me nothing (using free Oracle credits until Jan 28, 2026)
+- Costs me nothing (using free Oracle credits until Jan 28, 2026, then leveraging their generous always-free tier)
 
 **Specs:** 4-8 virtual CPUs, 24GB+ RAM
 
@@ -56,9 +56,9 @@ I'm running a **hybrid setup** where different parts of my workflow live in diff
 
 **Why GCP?**
 
-- Industry-standard platform for ML
+- Powerful platform for production-scale ML pipelines
 - I have $1,000 in Vertex AI credits to experiment with
-- Good for resume/portfolio to show I can work with managed services
+- Managed services handle the infrastructure complexity
 
 ## How They Work Together
 

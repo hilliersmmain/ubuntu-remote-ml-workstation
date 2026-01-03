@@ -10,7 +10,7 @@ I'm building hands-on experience with real-world infrastructure by splitting my 
 
 **What it does:** This is where I actually write code and run my IDE.
 
-**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**) that I'm using to experiment with their cloud platform. Having experience with Oracle, GCP, and AWS looks great on a resume.
+**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**), and even after those expire, Oracle Cloud offers one of the most generous always-free tiers in the industry. I can keep running a capable development VM indefinitely without paying a dime.
 
 **How I use it:** SSH in from my laptop, run VS Code Server, and do all my day-to-day development work here.
 
@@ -31,7 +31,7 @@ I'm building hands-on experience with real-world infrastructure by splitting my 
 
 **What it does:** When I need serious scale or managed ML services, I use Google Cloud's AI platform.
 
-**Why GCP?** I have $1,000 in Vertex AI credits, and it's the industry standard for ML pipelines.
+**Why GCP?** I have $1,000 in Vertex AI credits to experiment with managed ML services and production-scale infrastructure.
 
 ## The Hardware
 
