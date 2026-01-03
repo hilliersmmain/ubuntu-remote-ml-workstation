@@ -1,45 +1,84 @@
-# ubuntu-remote-ml-workstation
+# My Home ML Workstation
 
-Documentation for my specific Ubuntu ML workstation setup, featuring an RTX 3060 for local compute and integration with GCP Vertex AI for scalable workloads. Designed for dual-mode operation: direct GUI usage at the desk and SSH remote access from a laptop.
+This repo documents my personal Ubuntu machine—a 2023 gaming PC I'm repurposing as a secure compute node for machine learning projects. It's part of a bigger setup where I'm learning to work across multiple cloud providers while keeping my heavy compute and sensitive data at home.
 
-## Hardware Specs
+## Why This Setup?
 
-| Component | Specification |
-| :--- | :--- |
-| **Model** | 2023 CyberPower Prebuilt |
-| **CPU** | Intel Core i7-12700F |
-| **GPU** | NVIDIA RTX 3060 (12GB) |
-| **RAM** | 16GB |
-| **Storage** | 1TB NVMe SSD |
-| **OS** | Ubuntu 24.04 LTS |
+I'm building hands-on experience with real-world infrastructure by splitting my workflow across three environments:
 
-**Laptop Client:** HP Envy (i7-1355U, Intel Iris Xe, Windows 11)
+### 1. Oracle Cloud (Development Environment)
 
-## Architecture
+**What it does:** This is where I actually write code and run my IDE.
 
-This workstation operates in two primary modes:
+**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**) that I'm using to experiment with their cloud platform. Having experience with Oracle, GCP, and AWS looks great on a resume.
 
-1.  **GUI Mode:** Standard desktop usage for interactive development, visualization, and general productivity.
-2.  **Headless/SSH Mode:** Remote access from the Windows 11 laptop for submitting training jobs, monitoring processes, and managing files without being physically at the desk.
+**How I use it:** SSH in from my laptop, run VS Code Server, and do all my day-to-day development work here.
+
+### 2. This Ubuntu Machine (Heavy Compute & Storage)
+
+**What it does:** Runs the heavy stuff—model training, local inference, and stores my datasets.
+
+**Why keep it local?**
+
+- I already own the hardware (RTX 3060 GPU)
+- No cloud costs for storage or GPU time
+- Complete control over my data
+- Stays on my home network, so it's naturally isolated from the internet
+
+**How I use it:** Mostly headless (no monitor). I connect to it from my laptop when I need to run something locally or grab files.
+
+### 3. GCP Vertex AI (Production ML)
+
+**What it does:** When I need serious scale or managed ML services, I use Google Cloud's AI platform.
+
+**Why GCP?** I have $1,000 in Vertex AI credits, and it's the industry standard for ML pipelines.
+
+## The Hardware
+
+This is a gaming PC I bought in 2023. Here's what's inside:
+
+| Part          | Spec                        |
+| ------------- | --------------------------- |
+| **Case**      | CyberPower Prebuilt         |
+| **Processor** | Intel i7-12700F (12 cores)  |
+| **Graphics**  | NVIDIA RTX 3060 (12GB VRAM) |
+| **Memory**    | 16GB RAM                    |
+| **Storage**   | 1TB NVMe SSD                |
+| **OS**        | Ubuntu 24.04 LTS            |
+
+**My Laptop:** HP Envy with an i7-1355U (this is what I carry around and use to connect to everything else)
+
+## How It All Works Together
+
+Think of it like this:
+
+- **My laptop** is the remote control
+- **Oracle Cloud VM** is my desk where I work
+- **This Ubuntu machine** is my workshop with the power tools
+- **GCP** is like renting a factory when I need to scale up
+
+I can be at a coffee shop, SSH into my Oracle VM to write code, then kick off a training job on this machine at home—all without exposing my home network to the internet.
 
 ## Tech Stack
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-Vertex_AI-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## Project Status
+## Current Status
 
-- **Status:** 🚧 In Progress
-- **Current Focus:** Infrastructure setup and security hardening.
+🚧 **Work in Progress** — Currently setting up the networking and security to make everything work together smoothly.
 
-## Setup Roadmap
+**What's Done:**
 
-- [x] OS Installation (Ubuntu 24.04)
-- [x] MCP Server Configuration
-- [ ] Network Security (UFW & SSH Hardening)
-- [ ] NVIDIA Drivers & CUDA Install
-- [ ] Docker & Container Runtime
-- [ ] GCP Vertex AI SDK Integration
+- [x] Installed Ubuntu 24.04
+- [x] Set up MCP server for AI assistant integration
+
+**What's Next:**
+
+- [ ] Lock down the firewall (only allow local network access)
+- [ ] Install NVIDIA drivers and CUDA toolkit
+- [ ] Set up Docker for containerized workflows
+- [ ] Connect to GCP Vertex AI

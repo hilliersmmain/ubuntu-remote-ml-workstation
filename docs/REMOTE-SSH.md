@@ -1,11 +1,14 @@
 # Remote Access (SSH) Setup
 
 ## Objectives
-- Enable secure remote access from Windows 11 laptop.
+
+- Enable secure remote access from Windows 11 laptop over **LAN**.
 - Disable password authentication (Key-based only).
 - Configure convenient aliases.
+- _Note: VPN/WAN access is currently disabled/manual._
 
 ## Server Setup (Ubuntu)
+
 1. Install OpenSSH server: `sudo apt install openssh-server`
 2. Configure `/etc/ssh/sshd_config`:
    ```ssh
@@ -16,6 +19,7 @@
 3. Restart service: `sudo systemctl restart ssh`
 
 ## Client Setup (Windows)
+
 1. Generate Keypair (if needed): `ssh-keygen -t ed25519`
 2. Install Public Key:
    ```powershell
@@ -30,5 +34,6 @@
    ```
 
 ## Workflow
+
 Connect via Terminal: `ssh ml-workstation`
 Connect via VS Code: Use "Remote - SSH" extension and select `ml-workstation`.
