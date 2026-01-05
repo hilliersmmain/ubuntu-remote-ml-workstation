@@ -20,3 +20,8 @@ Tracking the progress of configuring the ml-workstation.
 - [ ] **GCP Vertex AI**: Authenticating SDK and testing job submission.
 - [ ] **Containers**: Docker Engine and NVIDIA Container Toolkit.
 - [ ] **GPU**: Proprietary NVIDIA drivers and CUDA toolkit installation.
+
+## Future Goals & Roadmap
+
+- [ ] **Laptop Dual Boot**: Planned future upgrade for HP Envy x360. See `docs/FUTURE-ROADMAP.md`.
+- [ ] **Environment Sync**: "Dotfiles" implementation. See `docs/FUTURE-ROADMAP.md`.
