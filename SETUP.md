@@ -12,17 +12,20 @@ Tracking the progress of configuring the ml-workstation.
 
 ## In Progress
 
-- [ ] **Oracle Cloud VM**: Waiting for ARM capacity. Retry script running. See [`docs/ORACLE-CLOUD-VM.md`](docs/ORACLE-CLOUD-VM.md).
-- [ ] **File Sharing**: Troubleshooting KDE Connect file transfer issues.
-- [ ] **Remote Access Strategy**: Prioritizing direct LAN/VPN-off workflow for now.
+- [ ] **Moving**: Transporting Desktop to new location (Jan 9-10).
+- [ ] **Hybrid Workflow**: Setting up Tailscale and WSL2. See [`docs/HYBRID_WORKFLOW.md`](docs/HYBRID_WORKFLOW.md).
+- [ ] **GCP Vertex AI**: Authenticating SDK and testing job submission.
 
 ## Pending
 
-- [ ] **GCP Vertex AI**: Authenticating SDK and testing job submission.
 - [ ] **Containers**: Docker Engine and NVIDIA Container Toolkit.
 - [ ] **GPU**: Proprietary NVIDIA drivers and CUDA toolkit installation.
 
 ## Future Goals & Roadmap
 
-- [ ] **Laptop Dual Boot**: Planned future upgrade for HP Envy x360. See `docs/FUTURE-ROADMAP.md`.
 - [ ] **Environment Sync**: "Dotfiles" implementation. See `docs/FUTURE-ROADMAP.md`.
+
+## Deprecated / Cancelled
+
+- [x] ~~**Oracle Cloud VM**~~: Deprioritized in favor of Local Desktop.
+- [x] ~~**Laptop Dual Boot**~~: Cancelled in favor of WSL2.

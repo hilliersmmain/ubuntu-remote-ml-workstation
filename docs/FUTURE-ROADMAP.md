@@ -2,21 +2,12 @@
 
 This document outlines technical strategies and plans for future enhancements to the ML Workstation ecosystem, specifically focusing on the laptop (`HP Envy x360`) setup.
 
-## 1. Laptop Dual-Boot Strategy (Deferred)
+## 1. Laptop Dual-Boot Strategy (Cancelled)
 
-**Goal:** Configure the HP Envy x360 as a dual-boot machine (Windows 11 / Ubuntu 24.04 LTS) for a consistent Linux development environment.
+**Status**: Cancelled in favor of **WSL2**.
+**Reason**: With a dedicated high-performance Desktop available, the complexity of dual-booting the laptop is unnecessary. WSL2 provides sufficient Linux tooling for the "Daily Driver".
 
-### Recommended Specs
-
-- **OS:** Ubuntu 24.04 LTS (Matches Desktop)
-- **Partitioning Strategy:**
-  - **Ubuntu:** ~60% (600GB) - Primary dev environment.
-  - **Windows 11:** ~35% (350GB) - For lockdown browsers, firmware updates, occasional Windows-only tools.
-  - **Shared Data:** ~5% (50GB) - NTFS partition for quick file sharing between OSs.
-
-### Optimization Note
-
-The i7-1355U + 16GB RAM is well-suited for a daily driver dev machine. Expect ~8-9% more available RAM on Linux compared to Windows, with faster file system operations for dev tools (git, npm).
+See [`docs/HYBRID_WORKFLOW.md`](docs/HYBRID_WORKFLOW.md) for the active strategy.
 
 ---
 
