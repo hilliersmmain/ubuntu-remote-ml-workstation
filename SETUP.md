@@ -12,6 +12,7 @@ Tracking the progress of configuring the ml-workstation.
 
 ## In Progress
 
+- [ ] **Oracle Cloud VM**: Waiting for ARM capacity. Retry script running. See [`docs/ORACLE-CLOUD-VM.md`](docs/ORACLE-CLOUD-VM.md).
 - [ ] **File Sharing**: Troubleshooting KDE Connect file transfer issues.
 - [ ] **Remote Access Strategy**: Prioritizing direct LAN/VPN-off workflow for now.
 

@@ -69,16 +69,24 @@ I can be at a coffee shop, SSH into my Oracle VM to write code, then kick off a 
 
 ## Current Status
 
-🚧 **Work in Progress** — Currently setting up the networking and security to make everything work together smoothly.
+🚧 **Work in Progress** — Transitioning to Oracle Cloud VM while desktop is unavailable.
 
 **What's Done:**
 
-- [x] Installed Ubuntu 24.04
+- [x] Installed Ubuntu 24.04 on desktop
 - [x] Set up MCP server for AI assistant integration
+- [x] Configured LAN-only firewall (UFW)
+- [x] Set up SSH access (LAN)
+- [x] Configured OCI CLI and API authentication
+- [x] Created automated VM provisioning script
+
+**In Progress:**
+
+- [ ] Waiting for Oracle Cloud ARM capacity (retry script running)
+- [ ] See [`docs/ORACLE-CLOUD-VM.md`](docs/ORACLE-CLOUD-VM.md) for details
 
 **What's Next:**
 
-- [ ] Lock down the firewall (only allow local network access)
-- [ ] Install NVIDIA drivers and CUDA toolkit
-- [ ] Set up Docker for containerized workflows
+- [ ] Configure Oracle VM (swap, Tailscale, Docker)
+- [ ] Install NVIDIA drivers and CUDA toolkit (desktop)
 - [ ] Connect to GCP Vertex AI

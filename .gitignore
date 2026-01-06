@@ -43,3 +43,10 @@ secrets.yaml
 # OS
 .DS_Store
 Thumbs.db
+
+# SSH Keys / Secrets
+keys/
+*.pem
+*_key
+*_key.pub
+oracle_vm_key*
