@@ -1,4 +1,4 @@
-# My Home ML Workstation
+# Ubuntu Remote ML Workstation
 
 This repo documents my personal Ubuntu machine—a 2023 gaming PC I'm repurposing as a secure compute node for machine learning projects. It's part of a bigger setup where I'm learning to work across multiple cloud providers while keeping my heavy compute and sensitive data at home.
 
