@@ -29,3 +29,4 @@ Tracking the progress of configuring the ml-workstation.
 
 - [x] ~~**Oracle Cloud VM**~~: Deprioritized in favor of Local Desktop.
 - [x] ~~**Laptop Dual Boot**~~: Cancelled in favor of WSL2.
+- [x] ~~**NordVPN Desktop App**~~: Uninstalled in favor of Browser Extension (resource optimization).
