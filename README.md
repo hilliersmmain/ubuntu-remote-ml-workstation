@@ -1,43 +1,54 @@
-# My Home ML Workstation
+# Ubuntu Remote ML Workstation
 
-This repo documents my personal Ubuntu machine—a 2023 gaming PC I'm repurposing as a secure compute node for machine learning projects. It's part of a bigger setup where I'm learning to work across multiple cloud providers while keeping my heavy compute and sensitive data at home.
+A professionally configured hybrid cloud infrastructure for machine learning development, demonstrating practical DevOps skills, cloud architecture, and security best practices.
 
-## Why This Setup?
+## Project Overview
 
-I'm building hands-on experience with real-world infrastructure by splitting my workflow across three environments:
+This repository documents the setup and configuration of a hybrid ML development environment that combines:
+- **Local compute resources** (Ubuntu workstation with NVIDIA GPU)
+- **Cloud development environments** (Oracle Cloud VM)
+- **Production ML platform** (GCP Vertex AI)
 
-### 1. Oracle Cloud (Development Environment)
+This architecture demonstrates real-world experience with multi-cloud environments, network security, and infrastructure optimization—skills directly applicable to modern ML engineering roles.
 
-**What it does:** This is where I actually write code and run my IDE.
+## Architecture
 
-**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**), and even after those expire, Oracle Cloud offers one of the most generous always-free tiers in the industry. I can keep running a capable development VM indefinitely without paying a dime.
+This setup demonstrates a cost-effective hybrid cloud strategy commonly used in production environments:
 
-**How I use it:** SSH in from my laptop, run VS Code Server, and do all my day-to-day development work here.
+### 1. Development Environment (Oracle Cloud)
 
-### 2. This Ubuntu Machine (Heavy Compute & Storage)
+**Purpose:** Remote development workspace accessible from anywhere
 
-**What it does:** Runs the heavy stuff—model training, local inference, and stores my datasets.
+**Key Features:**
+- VS Code Server for remote development
+- Always-on availability
+- Leverages Oracle Cloud's free tier for cost optimization
+- SSH-based secure access
 
-**Why keep it local?**
+### 2. Local Compute Node (Ubuntu Workstation)
 
-- I already own the hardware (RTX 3060 GPU)
-- No cloud costs for storage or GPU time
-- Complete control over my data
-- Stays on my home network, so it's naturally isolated from the internet
+**Purpose:** GPU-accelerated ML training and inference
 
-**How I use it:** Mostly headless (no monitor). I connect to it from my laptop when I need to run something locally or grab files.
+**Key Features:**
+- NVIDIA RTX 3060 (12GB VRAM) for model training
+- Network-isolated security configuration (UFW firewall)
+- Headless operation with remote management
+- Local data storage and processing
 
-### 3. GCP Vertex AI (Production ML)
+**Security:** Implements defense-in-depth with LAN-only access and strict firewall rules.
 
-**What it does:** When I need serious scale or managed ML services, I use Google Cloud's AI platform.
+### 3. Production ML Platform (GCP Vertex AI)
 
-**Why GCP?** I have $1,000 in Vertex AI credits to experiment with managed ML services and production-scale infrastructure.
+**Purpose:** Scalable production ML pipelines and managed services
 
-## The Hardware
+**Key Features:**
+- Integration with managed ML services
+- Scalable training infrastructure
+- Production-ready deployment capabilities
 
-This is a gaming PC I bought in 2023. Here's what's inside:
+## Hardware Specifications
 
-| Part          | Spec                        |
+| Component     | Specification               |
 | ------------- | --------------------------- |
 | **Case**      | CyberPower Prebuilt         |
 | **Processor** | Intel i7-12700F (12 cores)  |
@@ -46,20 +57,7 @@ This is a gaming PC I bought in 2023. Here's what's inside:
 | **Storage**   | 1TB NVMe SSD                |
 | **OS**        | Ubuntu 24.04 LTS            |
 
-**My Laptop:** HP Envy with an i7-1355U (this is what I carry around and use to connect to everything else)
-
-## How It All Works Together
-
-Think of it like this:
-
-- **My laptop** is the remote control
-- **Oracle Cloud VM** is my desk where I work
-- **This Ubuntu machine** is my workshop with the power tools
-- **GCP** is like renting a factory when I need to scale up
-
-I can be at a coffee shop, SSH into my Oracle VM to write code, then kick off a training job on this machine at home—all without exposing my home network to the internet.
-
-## Tech Stack
+## Technology Stack
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
@@ -67,26 +65,56 @@ I can be at a coffee shop, SSH into my Oracle VM to write code, then kick off a 
 ![GCP](https://img.shields.io/badge/GCP-Vertex_AI-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
-## Current Status
+## Key Skills Demonstrated
 
-🚧 **Work in Progress** — Transitioning to Oracle Cloud VM while desktop is unavailable.
+- **Cloud Infrastructure:** Multi-cloud setup (Oracle Cloud, GCP) with cost optimization strategies
+- **Network Security:** Firewall configuration (UFW), SSH hardening, VPN integration
+- **DevOps:** Infrastructure as code, automated provisioning, remote development workflows
+- **Containerization:** Docker setup for reproducible ML environments
+- **Linux Administration:** Headless server management, system hardening
+- **ML Operations:** GPU configuration, CUDA toolkit setup, model training infrastructure
 
-**What's Done:**
+## Documentation
 
-- [x] Installed Ubuntu 24.04 on desktop
-- [x] Set up MCP server for AI assistant integration
-- [x] Configured LAN-only firewall (UFW)
-- [x] Set up SSH access (LAN)
-- [x] Configured OCI CLI and API authentication
-- [x] Created automated VM provisioning script
+Detailed documentation is organized in the [`docs/`](docs/) directory:
 
-**In Progress:**
+- [**Architecture Overview**](docs/ARCHITECTURE.md) - System design and component interactions
+- [**Hybrid Workflow**](docs/HYBRID_WORKFLOW.md) - Development workflow across devices
+- [**GPU Setup**](docs/GPU-SETUP.md) - NVIDIA drivers and CUDA configuration
+- [**GCP Vertex AI**](docs/GCP-VERTEX-AI.md) - Cloud ML platform integration
+- [**UFW Firewall**](docs/UFW-FIREWALL.md) - Security configuration
+- [**Remote SSH**](docs/REMOTE-SSH.md) - Secure remote access setup
+- [**Recommended Tools**](docs/RECOMMENDED-TOOLS.md) - Development tools and extensions
 
-- [ ] Waiting for Oracle Cloud ARM capacity (retry script running)
-- [ ] See [`docs/ORACLE-CLOUD-VM.md`](docs/ORACLE-CLOUD-VM.md) for details
+## Implementation Status
 
-**What's Next:**
+### Completed
+- ✅ Ubuntu 24.04 LTS installation and configuration
+- ✅ Network security (UFW firewall, LAN-only access)
+- ✅ SSH access configuration
+- ✅ Oracle Cloud CLI and API authentication
+- ✅ Automated VM provisioning scripts
+- ✅ MCP server integration for AI-assisted development
 
-- [ ] Configure Oracle VM (swap, Tailscale, Docker)
-- [ ] Install NVIDIA drivers and CUDA toolkit (desktop)
-- [ ] Connect to GCP Vertex AI
+### In Progress
+- 🔄 Oracle Cloud VM capacity allocation
+- 🔄 Desktop relocation and network setup
+
+### Planned
+- 📋 NVIDIA driver and CUDA toolkit installation
+- 📋 Docker and NVIDIA Container Toolkit setup
+- 📋 GCP Vertex AI integration
+- 📋 Tailscale VPN configuration
+
+## Learning Outcomes
+
+This project provides hands-on experience with:
+- Designing and implementing hybrid cloud architectures
+- Securing infrastructure with defense-in-depth strategies
+- Managing remote development workflows
+- Optimizing costs through strategic cloud provider selection
+- Integrating multiple cloud platforms (multi-cloud strategy)
+
+---
+
+For setup instructions and detailed configuration guides, see the [documentation](docs/) directory.
