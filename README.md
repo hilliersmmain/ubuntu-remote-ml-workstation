@@ -1,41 +1,58 @@
-# Ubuntu Remote ML Workstation
+# Ubuntu Dual-Machine ML Workstation
 
-This repo documents my personal Ubuntu machine—a 2023 gaming PC I'm repurposing as a secure compute node for machine learning projects. It's part of a bigger setup where I'm learning to work across multiple cloud providers while keeping my heavy compute and sensitive data at home.
+This repo documents my personal Ubuntu setup across two machines—a 2023 gaming PC (desktop) and an HP Envy laptop. Both run Ubuntu 24.04 LTS and sync seamlessly for development and ML work. I'm building hands-on experience with real-world infrastructure while maintaining flexibility between portable and high-performance computing.
 
 ## Why This Setup?
 
-I'm building hands-on experience with real-world infrastructure by splitting my workflow across three environments:
+I'm building a practical, cost-effective development environment that leverages both local hardware and cloud resources:
 
-### 1. Oracle Cloud (Development Environment)
+### Primary Machines (Both Ubuntu 24.04.03 LTS)
 
-**What it does:** This is where I actually write code and run my IDE.
+#### 1. Desktop (Heavy Compute & Storage)
 
-**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**), and even after those expire, Oracle Cloud offers one of the most generous always-free tiers in the industry. I can keep running a capable development VM indefinitely without paying a dime.
-
-**How I use it:** SSH in from my laptop, run VS Code Server, and do all my day-to-day development work here.
-
-### 2. This Ubuntu Machine (Heavy Compute & Storage)
-
-**What it does:** Runs the heavy stuff—model training, local inference, and stores my datasets.
+**What it does:** GPU-accelerated model training, local inference, dataset storage, and intensive development work.
 
 **Why keep it local?**
 
 - I already own the hardware (RTX 3060 GPU)
 - No cloud costs for storage or GPU time
 - Complete control over my data
-- Stays on my home network, so it's naturally isolated from the internet
+- Stays on my home network, naturally isolated from the internet
 
-**How I use it:** Mostly headless (no monitor). I connect to it from my laptop when I need to run something locally or grab files.
+**How I use it:** Primarily headless (no monitor). SSH access from laptop when at home, or remote access when away.
 
-### 3. GCP Vertex AI (Production ML)
+#### 2. Laptop (Portable Development)
 
-**What it does:** When I need serious scale or managed ML services, I use Google Cloud's AI platform.
+**What it does:** Portable development, lighter workloads, and as the control station for my desktop.
 
-**Why GCP?** I have $1,000 in Vertex AI credits to experiment with managed ML services and production-scale infrastructure.
+**Why Ubuntu on laptop?**
+
+- Consistent development environment across both machines
+- Native Linux tooling and workflows
+- Seamless syncing with desktop
+- Dual-boot with Windows for school-specific needs only
+
+**How I use it:** Daily driver for coding, writing, and lighter ML experiments. Windows partition reserved exclusively for school requirements.
+
+### Cloud Resources
+
+#### Oracle Cloud (Optional Development Environment)
+
+**What it does:** Remote development environment accessible from anywhere.
+
+**Why Oracle?** I have $300 in free credits (good until **January 28, 2026**), and Oracle Cloud offers generous always-free tiers.
+
+**Status:** Currently deprioritized in favor of local dual-machine setup.
+
+#### GCP Vertex AI (Production ML)
+
+**What it does:** Managed ML services when I need serious scale.
+
+**Why GCP?** I have $1,000 in Vertex AI credits to experiment with production-scale infrastructure.
 
 ## The Hardware
 
-This is a gaming PC I bought in 2023. Here's what's inside:
+### Desktop (Primary Workstation)
 
 | Part          | Spec                        |
 | ------------- | --------------------------- |
@@ -44,49 +61,70 @@ This is a gaming PC I bought in 2023. Here's what's inside:
 | **Graphics**  | NVIDIA RTX 3060 (12GB VRAM) |
 | **Memory**    | 16GB RAM                    |
 | **Storage**   | 1TB NVMe SSD                |
-| **OS**        | Ubuntu 24.04 LTS            |
+| **OS**        | Ubuntu 24.04.03 LTS         |
 
-**My Laptop:** HP Envy with an i7-1355U (this is what I carry around and use to connect to everything else)
+### Laptop (Portable Machine)
+
+| Part          | Spec                                         |
+| ------------- | -------------------------------------------- |
+| **Model**     | HP Envy                                      |
+| **Processor** | Intel i7-1355U                               |
+| **Memory**    | 16GB RAM (estimated)                         |
+| **Storage**   | 512GB NVMe SSD (estimated)                   |
+| **OS**        | Ubuntu 24.04.03 LTS + Windows 11 (Dual-boot) |
+
+**Note:** Windows partition is used exclusively for school requirements.
 
 ## How It All Works Together
 
 Think of it like this:
 
-- **My laptop** is the remote control
-- **Oracle Cloud VM** is my desk where I work
-- **This Ubuntu machine** is my workshop with the power tools
-- **GCP** is like renting a factory when I need to scale up
+- **Laptop** is my daily driver and mobile workstation
+- **Desktop** is my high-performance workshop with GPU acceleration
+- **Syncing** keeps my development environment consistent across both
+- **Oracle Cloud VM** (optional) extends my workspace to the cloud
+- **GCP** is like renting a factory when I need massive scale
 
-I can be at a coffee shop, SSH into my Oracle VM to write code, then kick off a training job on this machine at home—all without exposing my home network to the internet.
+I can work on my laptop at a coffee shop, sync my changes, then SSH into my desktop at home to kick off GPU-intensive training jobs—all while maintaining a consistent Ubuntu environment.
 
 ## Tech Stack
 
-![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04.03_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/NVIDIA-CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Oracle](https://img.shields.io/badge/Oracle-Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-Vertex_AI-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ## Current Status
 
-🚧 **Work in Progress** — Transitioning to Oracle Cloud VM while desktop is unavailable.
+🚧 **Work in Progress** — Setting up dual-Ubuntu environment.
 
-**What's Done:**
+**Currently:** Creating bootable USB to reinstall Desktop with Ubuntu 24.04.03 LTS.
 
-- [x] Installed Ubuntu 24.04 on desktop
-- [x] Set up MCP server for AI assistant integration
-- [x] Configured LAN-only firewall (UFW)
-- [x] Set up SSH access (LAN)
-- [x] Configured OCI CLI and API authentication
-- [x] Created automated VM provisioning script
+**Laptop Status:**
 
-**In Progress:**
+- [x] Running Ubuntu 24.04.03 LTS
+- [x] Antigravity & MCP servers configured
+- [x] Created Ubuntu bootable USB
+- [x] Created post-install automation scripts
 
-- [ ] Waiting for Oracle Cloud ARM capacity (retry script running)
-- [ ] See [`docs/ORACLE-CLOUD-VM.md`](docs/ORACLE-CLOUD-VM.md) for details
+**Desktop Status:**
+
+- [ ] Fresh Ubuntu 24.04.03 LTS installation (in progress)
+- [ ] Post-install automation (NVIDIA, Docker, SSH)
+- [ ] Environment sync with Laptop
+- [ ] Optional Windows dual-boot for future needs
 
 **What's Next:**
 
-- [ ] Configure Oracle VM (swap, Tailscale, Docker)
-- [ ] Install NVIDIA drivers and CUDA toolkit (desktop)
-- [ ] Connect to GCP Vertex AI
+1. Install Ubuntu on Desktop using created USB
+2. Run `scripts/post-install.sh` to configure Desktop
+3. Set up syncing between Laptop and Desktop (dotfiles, projects)
+4. Configure SSH/Tailscale for remote access
+5. (Optional) Install Windows dual-boot on Desktop for school
+6. (Optional) Set up Oracle Cloud VM if needed
+
+## Documentation
+
+- [`docs/DESKTOP-REINSTALL.md`](docs/DESKTOP-REINSTALL.md) - Step-by-step Desktop installation guide
+- [`scripts/post-install.sh`](scripts/post-install.sh) - Automated post-installation setup

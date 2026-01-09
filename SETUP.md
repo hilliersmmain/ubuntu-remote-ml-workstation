@@ -12,6 +12,7 @@ Tracking the progress of configuring the ml-workstation.
 
 ## In Progress
 
+- [ ] **Desktop Reinstall**: Creating Ubuntu 24.04 bootable USB and automation scripts. See [`docs/DESKTOP-REINSTALL.md`](docs/DESKTOP-REINSTALL.md).
 - [ ] **Moving**: Transporting Desktop to new location (Jan 9-10).
 - [ ] **Hybrid Workflow**: Setting up Tailscale and WSL2. See [`docs/HYBRID_WORKFLOW.md`](docs/HYBRID_WORKFLOW.md).
 - [ ] **GCP Vertex AI**: Authenticating SDK and testing job submission.
