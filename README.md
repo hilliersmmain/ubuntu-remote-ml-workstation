@@ -6,7 +6,12 @@
 [![NordVPN](https://img.shields.io/badge/VPN-Meshnet%20%2B%20Dedicated%20IP-4687FF?style=for-the-badge&logo=nordvpn)](https://nordvpn.com)
 [![GCP](https://img.shields.io/badge/Cloud-Vertex%20AI-4285F4?style=for-the-badge&logo=googlecloud)](https://cloud.google.com/vertex-ai)
 
-**Ubuntu Remote ML Workstation** is a production-ready hybrid machine learning infrastructure that enables seamless, secure development across a high-performance GPU desktop and a lightweight laptop—accessible from anywhere in the world via encrypted mesh networking. This project demonstrates enterprise-grade DevOps, network security, and ML infrastructure design.
+**Ubuntu Remote ML Workstation** is a production-ready hybrid machine learning infrastructure that enables seamless, secure development across a high-performance GPU desktop and a lightweight laptop—accessible from anywhere in the world via encrypted mesh networking.
+
+### ♻️ The Story Behind the Build
+This project started with a decision to stop letting good hardware go to waste. **This desktop used to be my dedicated gaming PC.** But as my focus shifted from gaming to Artificial Intelligence, I didn't want to just toss it or let it gather dust.
+
+Instead, I **wiped the Windows partition entirely**, re-architected the machine from the ground up, and configured it as a dedicated, headless Linux ML server. Now, it serves as my personal compute cluster, allowing me to train models on an RTX 3060 without burning up my laptop, all while sitting in a coffee shop miles away.
 
 ---
 
@@ -41,8 +46,7 @@
 
 ## 💪 Hardware Specifications
 
-### Desktop — Primary Compute Hub
-
+### Desktop — Primary Compute Hub (Repurposed Gaming Rig)
 | Component | Specification | Purpose |
 |-----------|---------------|---------|
 | **CPU** | Intel Core i7-12700F (12 cores, 20 threads) | Parallel processing, data preprocessing |
@@ -52,10 +56,9 @@
 | **OS** | Ubuntu 24.04.03 LTS (Hardened) | Stability, security, ML library support |
 
 ### Laptop — Portable Development Client
-
 | Component | Specification | Purpose |
 |-----------|---------------|---------|
-| **Model** | HP Envy | Portability |
+| **Model** | **HP Envy x360 2-in-1 Laptop** | Portability & Flexibility |
 | **CPU** | Intel Core i7-1355U | Code editing, lightweight inference |
 | **RAM** | 16GB | Local development |
 | **OS** | Ubuntu 24.04.03 LTS + Windows 11 (Dual-boot) | Flexibility |
@@ -67,7 +70,6 @@
 The core innovation enabling location-independent GPU access:
 
 ### NordVPN Meshnet + Dedicated IP
-
 | Feature | Implementation | Benefit |
 |---------|----------------|---------|
 | **Meshnet Enabled** | Direct P2P encrypted tunnel | No exposed public ports, NAT traversal |
@@ -84,7 +86,6 @@ kdeconnect-cli --pair
 ```
 
 ### Security Hardening Stack
-
 | Layer | Implementation | Protection |
 |-------|----------------|------------|
 | **Firewall** | UFW (ports 22, 1714-1764, Meshnet only) | Attack surface minimization |
@@ -95,7 +96,6 @@ kdeconnect-cli --pair
 ---
 
 ## ✅ Implementation Status
-
 | Feature | Status | Details |
 |---------|--------|---------|
 | **NordVPN Meshnet + Dedicated IP** | ✅ Complete | Global SSH/KDE Connect access |
@@ -110,7 +110,6 @@ kdeconnect-cli --pair
 ---
 
 ## 🛠️ Technology Stack
-
 | Category | Technologies |
 |----------|--------------|
 | **Operating System** | Ubuntu 24.04 LTS, systemd, GNOME |
@@ -123,7 +122,6 @@ kdeconnect-cli --pair
 ---
 
 ## 🎯 Project Outcomes & Impact
-
 | Outcome | Metric |
 |---------|--------|
 | **Cost Savings** | ~$500/month vs. cloud GPU instances |
@@ -135,7 +133,6 @@ kdeconnect-cli --pair
 ---
 
 ## 📁 Repository Structure
-
 ```
 ubuntu-remote-ml-workstation/
 ├── scripts/
@@ -152,7 +149,6 @@ ubuntu-remote-ml-workstation/
 ---
 
 ## 🎯 Skills & Competencies Demonstrated
-
 **Infrastructure & DevOps**
 - Linux system administration and hardening
 - Network security design (VPN, firewall, intrusion detection)
@@ -172,18 +168,16 @@ ubuntu-remote-ml-workstation/
 ---
 
 ## 👤 About the Developer
-
 **Sam Hillier** — Undergraduate researcher with an interdisciplinary background bridging life sciences and artificial intelligence.
 
 - 🎓 **Current:** B.S. Data Science, UNC Charlotte (Transitioning to B.S. Artificial Intelligence, Fall 2026)
 - 🧠 **Minor:** Cognitive Science
 - 🔬 **Background:** B.S. Biology (Cellular/Molecular concentration), Appalachian State University (2024-2025)
-- 📚 **Spring 2026 Coursework:** Human-Centered Computing (ITIS 3130), Computer Science II (ITSC 1213), Discrete Mathematics (MATH 2112)
+- 📚 **Spring 2026 Coursework:** Human-Centered Computing (ITIS 3130), Computer Science II (ITSC 1213), Mathematics for Computer Science (MATH 2112)
 
 *Passionate about AI applications in neuroscience, human-computer interaction, and building the infrastructure that powers intelligent systems.*
 
 ---
 
 ## 📄 License
-
 MIT License
