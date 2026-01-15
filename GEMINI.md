@@ -2,7 +2,7 @@
 
 - Desktop System Information: Ubuntu 24.04.3 (X11, Kernel 6.14), i7-12700F, RTX 3060, 16GB RAM, ASUS B660M.
 
-- Laptop System Information: Ubuntu 24.04.3 (Wayland, Kernel 6.14), i7-1355U, Intel Iris Xe Graphics, 16GB RAM, HP Envy x360 14-es0xxx.
+- Laptop System Information: Ubuntu 24.04.3 (X11, Kernel 6.14), i7-1355U, Intel Iris Xe Graphics, 16GB RAM, HP Envy x360 14-es0xxx.
 
 # MCP's
 

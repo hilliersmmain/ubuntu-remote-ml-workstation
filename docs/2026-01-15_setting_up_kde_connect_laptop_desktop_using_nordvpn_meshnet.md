@@ -2,7 +2,7 @@
 
 ## Objective
 
-Establish a secure, reliable connection between an Ubuntu Desktop (X11) and an Ubuntu Laptop (Wayland) for file sharing and integration, bypassing the client isolation on the "Rush Student Living" WiFi.
+Establish a secure, reliable connection between an Ubuntu Desktop (X11) and an Ubuntu Laptop (X11) for file sharing and integration, bypassing the client isolation on the "Rush Student Living" WiFi.
 
 ## Technical Accomplishments
 
@@ -30,7 +30,7 @@ Establish a secure, reliable connection between an Ubuntu Desktop (X11) and an U
 ### 3. Desktop/Laptop Integration
 
 - **Manual Pairing:** Modified `~/.config/kdeconnect/config` on the Laptop to include the Desktop's Meshnet IP.
-- **Stability Fix:** Disabled the **Clipboard Sync** plugin on the Desktop to resolve a crash loop caused by X11/Wayland protocol friction.
+- **Stability Fix:** Disabled the **Clipboard Sync** plugin on the Desktop to resolve a crash loop that persisted even after switching both devices to X11.
 - **Status:** File sharing, media control, and notifications are fully functional between Desktop and Laptop.
 
 ### 4. iOS / iPad Observations

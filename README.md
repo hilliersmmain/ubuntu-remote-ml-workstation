@@ -59,12 +59,12 @@ Instead, I **wiped the Windows partition entirely**, re-architected the machine 
 
 ### Laptop — Portable Development Client
 
-| Component | Specification                                | Purpose                             |
-| --------- | -------------------------------------------- | ----------------------------------- |
-| **Model** | **HP Envy x360 2-in-1 Laptop**               | Portability & Flexibility           |
-| **CPU**   | Intel Core i7-1355U                          | Code editing, lightweight inference |
-| **RAM**   | 16GB                                         | Local development                   |
-| **OS**    | Ubuntu 24.04.03 LTS + Windows 11 (Dual-boot) | Flexibility                         |
+| Component | Specification                                      | Purpose                             |
+| --------- | -------------------------------------------------- | ----------------------------------- |
+| **Model** | **HP Envy x360 2-in-1 Laptop**                     | Portability & Flexibility           |
+| **CPU**   | Intel Core i7-1355U                                | Code editing, lightweight inference |
+| **RAM**   | 16GB                                               | Local development                   |
+| **OS**    | Ubuntu 24.04.03 LTS (X11) + Windows 11 (Dual-boot) | Flexibility                         |
 
 ---
 
@@ -119,7 +119,7 @@ kdeconnect-cli --pair
 
 | Category             | Technologies                                                   |
 | -------------------- | -------------------------------------------------------------- |
-| **Operating System** | Ubuntu 24.04 LTS, systemd, GNOME                               |
+| **Operating System** | Ubuntu 24.04 LTS (X11), systemd, GNOME                         |
 | **Networking**       | NordVPN Meshnet, Dedicated IP, KDE Connect, UFW, Fail2Ban      |
 | **GPU Compute**      | NVIDIA Driver 535+, CUDA 12.x, cuDNN, NVIDIA Container Toolkit |
 | **ML Frameworks**    | PyTorch 2.x, TensorFlow 2.x, Hugging Face Transformers         |
